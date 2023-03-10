@@ -18,6 +18,9 @@ export default function NotesList() {
           note={item}
         />
       ))}
+      {!notes.length &&  
+      <span>Список заметок пуст</span>
+      }
     </>
   )
 }

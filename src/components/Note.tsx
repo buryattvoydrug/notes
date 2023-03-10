@@ -16,7 +16,9 @@ export default function Note() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(addNote(note));
+    if (!currentNote) {
+      dispatch(addNote(note));
+    }
   },[])
 
 
