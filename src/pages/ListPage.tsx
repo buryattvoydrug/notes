@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import AddButton from '../components/AddButton'
 import NotesList from '../components/NotesList'
 
 export default function ListPage() {
@@ -8,6 +9,7 @@ export default function ListPage() {
   return (
     <>
       <NotesList/>
+      <AddButton/>
     </>
   )
 }

@@ -12,7 +12,7 @@ function App() {
       <AppBar position="fixed" color="primary">
         <Toolbar>
           <Container style={{display: 'flex', justifyContent: 'space-between'}}>
-            <Link to="/">
+            <Link to="/notes">
               <IconButton edge="start" color="inherit" aria-label="menu">
                 <>Заметки</>
               </IconButton>
@@ -32,8 +32,6 @@ function App() {
             <Route path='/notes' element={<ListPage/>}/>
             <Route path='/' element={<NotePage/>}/>
         </Routes>
-        
-        <AddButton/>
         
       </Container>
     </Router>
