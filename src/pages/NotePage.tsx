@@ -1,10 +1,15 @@
-import React from 'react'
-import Note from '../components/Note'
+import TextEditor, { TextEditorProvider } from '../TextEditor'
+import Tools from '../Tools'
 
 export default function NotePage() {
   return (
     <>
-      <Note/>
+      <TextEditorProvider >
+        <>
+          <Tools />
+          <TextEditor />
+        </>
+      </TextEditorProvider>
     </>
   )
 }

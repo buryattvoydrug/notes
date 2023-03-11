@@ -1,5 +1,5 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core'
-import React from 'react'
+import { Box, Button, Card, CardActions, CardContent, Typography } from '@material-ui/core'
+import { convertToRaw } from 'draft-js';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteNote, Note, setCurrentNote } from '../utils/actions';
@@ -20,12 +20,18 @@ export default function NoteCard({note}: NoteCardProp) {
     dispatch(deleteNote(note))
   }
 
+  const cardText = note.content.getCurrentContent()
+                               .getFirstBlock()
+                               .getText();
   return (
     <>
       <Card variant="outlined" style={{width: "100%", marginBottom: "10px"}}>
         <CardContent>
-          <Typography color="textSecondary" gutterBottom>
-            {note.content}
+          <Typography
+            color="textSecondary" 
+            gutterBottom
+          >
+            {cardText.slice(0, 80)}
           </Typography>
         </CardContent>
         <CardActions>

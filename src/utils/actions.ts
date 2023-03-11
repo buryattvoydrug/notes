@@ -1,6 +1,8 @@
+import { EditorState } from "draft-js";
+
 export type Note = {
   id: string,
-  content: string,
+  content: EditorState,
 }
 
 export type Action = { 

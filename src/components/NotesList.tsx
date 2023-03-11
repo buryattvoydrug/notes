@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { addNote } from '../utils/actions';
+import { useSelector } from 'react-redux';
 import { NotesState } from '../utils/reducers';
 import NoteCard from './NoteCard';
 

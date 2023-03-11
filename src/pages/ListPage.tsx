@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import AddButton from '../components/AddButton'
 import NotesList from '../components/NotesList'
 

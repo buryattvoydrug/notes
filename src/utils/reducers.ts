@@ -13,7 +13,6 @@ const initialState = {
 export const notesReducer = (state:NotesState = initialState, action: Action) => {
   switch(action.type){
     case "ADD_NOTE": {
-      console.log("ADD_NOTE")
       return {...state, notes: [...state.notes, action.payload]}
     }
     case "DELETE_NOTE": {
@@ -21,7 +20,6 @@ export const notesReducer = (state:NotesState = initialState, action: Action) =>
       return {...state}
     }
     case "UPDATE_NOTE": {
-      console.log("UPDATE_NOTE")
       state.notes = state.notes.map((item) => item.id === action.payload.id
                                               ? action.payload
                                               : item);
@@ -34,15 +32,3 @@ export const notesReducer = (state:NotesState = initialState, action: Action) =>
       return state
   }
 }
-
-// addTodo: (state, {payload: {task, id, completed}})=>{
-             
-//             state.todos.push({id, task, completed})
-//         },
-//         deleteTodo: (state, {payload: {todoId}})=>{
-//             state.todos = state.todos.filter(todo=> todo.id !== todoId)
-//         },
-//         editTodo: (state, {payload: {editedTodo}})=>{
-//             console.log(editedTodo)
-//             state.todos = state.todos.map(todo => todo.id === editedTodo.id ? editedTodo : todo);
-//         },
