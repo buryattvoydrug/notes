@@ -31,7 +31,7 @@ export default function NoteCard({note}: NoteCardProp) {
             color="textSecondary" 
             gutterBottom
           >
-            {cardText.slice(0, 80)}
+            {cardText.slice(0, 80) || "Пустая заметка"}
           </Typography>
         </CardContent>
         <CardActions>
