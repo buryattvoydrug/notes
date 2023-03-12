@@ -20,9 +20,8 @@ export default function NoteCard({note}: NoteCardProp) {
     dispatch(deleteNote(note))
   }
 
-  const cardText = note.content.getCurrentContent()
-                               .getFirstBlock()
-                               .getText();
+  const cardText = note.content.blocks[0].text
+
   return (
     <>
       <Card variant="outlined" style={{width: "100%", marginBottom: "10px"}}>

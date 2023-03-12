@@ -3,7 +3,7 @@ import { Editor } from 'draft-js'
 import { useEditorApi } from './context';
 
 export default function TextEditor() {
-  const { note, onChange } = useEditorApi();
+  const { editorState, onChange } = useEditorApi();
   
   return (
     <div>
@@ -14,7 +14,7 @@ export default function TextEditor() {
         }}
         >
         <Editor
-          editorState={note.content}
+          editorState={editorState}
           onChange={onChange}
         />
       </Box>

@@ -1,8 +1,8 @@
-import { EditorState } from "draft-js";
+import { EditorState, RawDraftContentState } from "draft-js";
 
 export type Note = {
   id: string,
-  content: EditorState,
+  content: RawDraftContentState,
 }
 
 export type Action = { 
